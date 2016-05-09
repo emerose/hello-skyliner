@@ -12,6 +12,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
     http.HandleFunc("/", handler)
+    panic("kaboom!")
     addr := fmt.Sprintf(":%s", os.Getenv("PORT"))
     http.ListenAndServe(addr, nil)
 }
